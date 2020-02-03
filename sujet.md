@@ -40,7 +40,7 @@ Cet entraînement se nomme supervisé.
 
 ![](neuron-fonctionnement.png)
 
-#Exercice
+# Exercice
 
 En suiviant le shéma ci-dessus, créer une class "Neuron" qui prend un paramètre le nombre d'inputs du neurone
 
