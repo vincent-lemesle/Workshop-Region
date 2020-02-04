@@ -7,7 +7,7 @@ Les réseaux de neurones sont généralement optimisés par des méthodes d’ap
 <br/>
 Nous pouvons en schematiser un comme ceci:
 
-![](reseau-de-neurones-fonctionnement.jpg)
+![](src/reseau-de-neurones-fonctionnement.jpg)
 
 Un réseau de neurones est un ensemble de couches de neurones qui ont chacune une fonctionnalité.
 Ici nous pouvons distinguer trois catégories:
@@ -17,7 +17,7 @@ Ici nous pouvons distinguer trois catégories:
 
 Le but de ce workshop est de vous faire développer un seul et unique neurone.
 <br />
-![](neuron.png)
+![](src/neuron.png)
 Un neurone va prendre X nombre de valeurs et en ressortir un output.
 <br/>
 Comme vous pouvez le voir ci-dessus, il stock des poids qui sont liés aux inputs et un biais (également un poids mais qui n'est pas lié à un input).
@@ -38,11 +38,12 @@ Cet entraînement se nomme supervisé.
 <br/>
 [plus d'explications](https://likeabot.io/blog/apprentissage-supervise-et-non-supervise-machine-learning-ia)
 
-![](neuron-fonctionnement.png)
+![](src/neuron-fonctionnement.png)
 
 # Exercice
 
-En suiviant le shéma ci-dessus, créer une class "Neuron" qui prend un paramètre le nombre d'inputs du neurone
+En suiviant le shéma ci-dessus, créer une class "Neuron" qui prend un paramètre le nombre d'inputs du neurone.
+[tuto clas python](https://www.w3schools.com/python/python_classes.asp)
 
 Attributs:
 - "_activate" nombre initialisé à 0.
@@ -51,12 +52,21 @@ Attributs:
 - "_weights" liste de nombre aléatoire entre -1 et 1, sa taille est égale au nombre d'inputs.
 
 Méthodes:
-- "activation" Cette fonction, servira à set "_activate" de notre class
+- "activation" Cette fonction (sigmoid), servira à set "_activate" de notre class
 - "compute-gradient" Cette fonction, servira à set "_gradient" de notre class
 - "update-weights" changer les poids pour qu'ils s'adaptent à notre résulat attendu.
 - "train" prends en paramètre les inputs, les résultats attendu ainsi qu'un taux d'apprentissage (règle l'intensité de l'entrainement).
 
 Réaliser un apprentissage de votre neurone pour la porte logique and.
+Pour notre neurones, sa fonction d'activation est une [sigmoid](https://fr.wikipedia.org/wiki/Sigmo%C3%AFde_(math%C3%A9matiques).
+<br/>
+Son "_activate" sera donc entre 0 et 1. Ici si le neurone est >= 0.5, il est égale à 1 et à l'inverse 0.
+<br/>
+Nous pouvons donc maintenant le comparer à notre résultat attendu.
+<br/>
+Réfléchissez bien aux valeurs de vos paramètres comme le learning rate ou même le nombre de fois ou vous allez adapter les poids de votre neurone.
+<br/>
+[taux d'appentrissage](https://towardsdatascience.com/understanding-learning-rates-and-how-it-improves-performance-in-deep-learning-d0d4059c1c10)
 
 inputs = [[0, 0], [1, 0], [0, 1], [1, 1]]
 <br/>
@@ -73,15 +83,15 @@ Vous allez utiliser la fonction "mean_squared_error" de "sklearn.metrics".
 # Problème du perceptron
 
 Un seul et unique perceptron ne peut résoudre que des problèmes linéairement résolvables,
-![](linear-problem.png)
+![](src/linear-problem.png)
 comme des portes logiques tel que le “or” ou le “and”. Le “xor” quand à lui n’est pas linéairement résolvable,
 <br/>
 nous devons donc utiliser plusieurs perceptrons pour remédier à ce problème.
 <br/>
 C'est la que les réseaux de neurones entreront en jeux.
 
-Si vous êtes à cet endroit du workshop c'est que vous avez atteing le but du workshop.
+Si vous êtes à cet endroit du workshop c'est que vous avez atteint le but du workshop.
 <br/>
 De nombreux frameworks ont été crée afin de pouvoir créer plus facilement des réseaux de neurones notamment.
 <br/>
-Essayer d'en créer un grâce à [Pytorch](https://pytorch.org/) !
+Essayer d'en créer et tu lui faire apprendre la porte xor [Pytorch](https://pytorch.org/) !
