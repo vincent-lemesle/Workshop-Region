@@ -59,7 +59,8 @@ Méthodes:
 
 Réaliser un apprentissage de votre neurone pour la porte logique and.
 Pour notre neurone, sa fonction d'activation est une
-[sigmoid](https://fr.wikipedia.org/wiki/Sigmo%C3%AFde_(math%C3%A9matiques).
+[sigmoïd](https://fr.wikipedia.org/wiki/Sigmoïde_(mathématiques))
+.
 <br/>
 Son "_activate" sera donc entre 0 et 1. Si l'activation du neurone est >= 0.5, il est égale à 1 et à l'inverse 0.
 <br/>
