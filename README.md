@@ -94,8 +94,8 @@ Nous devons donc utiliser plusieurs perceptrons pour remédier à ce problème.
 <br/>
 C'est la que les réseaux de neurones entreront en jeux.
 
-Si vous êtes à cet endroit du workshop c'est que vous avez atteint le but du workshop.
+Si vous êtes à cet endroit c'est que vous avez atteint le but du workshop.
 <br/>
-De nombreux frameworks ont été crée afin de pouvoir créer plus facilement des réseaux de neurones notamment.
+De nombreux frameworks ont été crée afin de pouvoir créer plus facilement des réseaux de neurones.
 <br/>
-Essayez d'en créer un et de lui faire apprendre la porte xor [Pytorch](https://pytorch.org/) !
+Essayez d'en créer un et de lui faire apprendre la porte XOR avec [Pytorch](https://pytorch.org/) !
